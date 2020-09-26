@@ -17,7 +17,7 @@ module.exports = {
         }
 
         return res.json(plant);
-    },
+    }, 
 
     async show(req, res) {
         const { plantId } = req.params;
