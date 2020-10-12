@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const routes = require('./routes.js')
+const routes = require('./routes.js');
+const routesAuth = require('./routesAuth.js')
+
 //const middleware = require('./middleware.js');
 
 require ('./database');
@@ -12,6 +14,7 @@ app.use(cors({origin: true, credentials: true}));
 //app.use(middleware);
 
 app.use(routes);
+app.use(routesAuth);
 
 console.log('Server running');
 
