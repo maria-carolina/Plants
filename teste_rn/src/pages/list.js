@@ -3,8 +3,6 @@ import api from '../services/api'
 
 import { View, Text, TextInput, Button, FlatList, StyleSheet, TouchableOpacity, Image} from 'react-native';
 
-const DATA = ['um', 'dois', 'três']
-
 export default class List extends Component{
     state = {
         plants: null

@@ -1,17 +1,15 @@
 import { createStackNavigator } from 'react-navigation-stack';
 
-import List from './pages/list';
+//import List from './pages/list';
+import NewPlant from './pages/newPlant';
 
 const Root = createStackNavigator({
-    List,
+    NewPlant,
+    
 },{
     defaultNavigationOptions: {
-        headerStyle:{
-            backgroundColor: '#8FBC8F'
-        },
-        headerTintColor: '#FFF'
+       headerShown: false
     },
 });
 
 export default Root;
-
