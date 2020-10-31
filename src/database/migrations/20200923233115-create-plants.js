@@ -17,6 +17,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      image: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       genus_id: {
         type: Sequelize.INTEGER,
         allowNull: false,

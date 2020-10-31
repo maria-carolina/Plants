@@ -1,4 +1,5 @@
 const Plant = require('../models/Plant')
+const multer = require('multer');
 
 module.exports = {
     async index(req,res) {
@@ -18,6 +19,20 @@ module.exports = {
 
         return res.json(plant);
     }, 
+
+    async storeImage(req, res) {
+        const { plantId } = req.params;
+        const { filename: key} = req.file;
+
+        const plant = await Plant.update({ 
+            image: key 
+        },{ 
+            where: { id: plantId }
+        });
+
+          return res.send({ message: "Imagem inserida com sucesso" })
+    
+    },
 
     async show(req, res) {
         const { plantId } = req.params;
