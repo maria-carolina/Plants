@@ -1,4 +1,5 @@
 const Plant = require('../models/Plant')
+const User = require('../models/User');
 const multer = require('multer');
 
 module.exports = {
@@ -68,6 +69,11 @@ module.exports = {
           });
 
           return res.send({ message: "Planta alterada" })
+    },
+
+    async indexAuth(req, res) {
+        const user = await User.findByPk(req.userId);
+        return res.send({message: 'User: ' + user.name + ' autendicado'});
     }
 
 }

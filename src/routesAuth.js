@@ -5,6 +5,6 @@ const PlantController = require('./controllers/PlantController');
 
 routesAuth.use(authMiddleware);
 
-routesAuth.get('/', PlantController.index);
+routesAuth.get('/testeAuth', PlantController.indexAuth);
 
 module.exports = routesAuth;
